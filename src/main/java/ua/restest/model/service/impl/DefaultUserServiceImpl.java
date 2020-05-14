@@ -44,10 +44,10 @@ public class DefaultUserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(User user) {
-        if (Objects.isNull(user)) {
+    public void deleteById(Long id) {
+        if (Objects.isNull(id)) {
             throw new IllegalArgumentException("Null id passed to delete");
         }
-        userRepository.delete(userMapper.mapDtoToEntity(user));
+        userRepository.deleteById(id);
     }
 }

@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 @Builder
-@NoArgsConstructor
 @Entity(name = "user")
 public class UserEntity {
 

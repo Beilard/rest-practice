@@ -1,15 +1,15 @@
 package ua.restest.model.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 
 @Data
+@Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity(name = "account")
 public class AccountEntity {
 
@@ -17,7 +17,12 @@ public class AccountEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "account_number")
+    private Long accountNumber;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Long accountNumber;
+    private UserEntity user;
+
+
 }

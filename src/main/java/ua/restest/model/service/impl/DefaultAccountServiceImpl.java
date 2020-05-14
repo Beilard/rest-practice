@@ -43,10 +43,10 @@ public class DefaultAccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void delete(Account account) {
-        if (Objects.isNull(account)) {
+    public void deleteById(Long id) {
+        if (Objects.isNull(id)) {
             throw new IllegalArgumentException("Null id passed to delete");
         }
-        accountRepository.delete(accountMapper.mapDtoToEntity(account));
+        accountRepository.deleteById(id);
     }
 }

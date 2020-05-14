@@ -12,7 +12,11 @@ public class AccountMapper {
         if (Objects.isNull(account)) {
             return null;
         }
-        return new AccountEntity(account.getId(), account.getAccountNumber());
+        AccountEntity entity = new AccountEntity();
+        entity.setId(account.getId());
+        entity.setAccountNumber(account.getAccountNumber());
+
+        return entity;
     }
 
     public Account mapEntityToDto(AccountEntity entity) {
