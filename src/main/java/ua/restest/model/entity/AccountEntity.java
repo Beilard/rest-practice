@@ -1,13 +1,13 @@
 package ua.restest.model.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "account")

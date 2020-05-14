@@ -1,15 +1,13 @@
 package ua.restest.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
+@Data
+@Builder
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity(name = "user")
 public class UserEntity {
 
